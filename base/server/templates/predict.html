@@ -1,0 +1,125 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<div class="container text-center">
+    <h1>M1 Purchase Prediction</h1>
+</div>
+
+<div class="container text-center">
+    <p>{{ result }}</p>
+</div>
+
+<div class="container-fluid m-2 m-3">
+    <form method="post">
+        {% csrf_token %}
+        <div class="form-group">
+            <label>Trust Apple</label>
+            <input class="form-control" type="text" name="trust_apple" placeholder="(Yes - No)">
+        </div>
+
+        <div class="form-group">
+            <label>Interest Computers</label>
+            <input class="form-control" type="text" name="interest_computers" placeholder="(Good - Bad)">
+        </div>
+
+        <div class="form-group">
+            <label>Age Computer</label>
+            <input class="form-control" type="text" name="age_computer" placeholder="(Very Old - Old - New)">
+        </div>
+
+        <div class="form-group">
+            <label>Current PC</label>
+            <input class="form-control" type="text" name="user_pcmac" placeholder="(Apple - Other)">
+        </div>
+
+        <div class="form-group">
+            <label>Apple Products Count</label>
+            <input class="form-control" type="number" name="appleproducts_count" placeholder="(0-10)">
+        </div>
+
+        <div class="form-group">
+            <label>Familiarity M1</label>
+            <input class="form-control" type="text" name="familiarity_m1" placeholder="(Yes - No)">
+        </div>
+
+        <div class="form-group">
+            <label>Battery Life</label>
+            <input class="form-control" type="text" name="f_batterylife" placeholder="(Low - Normal - High)">
+        </div>
+
+        <div class="form-group">
+            <label>Price</label>
+            <input class="form-control" type="text" name="f_price" placeholder="(Low - Normal - Normal-High - High)">
+        </div>
+
+        <div class="form-group">
+            <label>Size</label>
+            <input class="form-control" type="number" name="f_size" placeholder="(0-5)">
+        </div>
+
+        <div class="form-group">
+            <label>Multitasking</label>
+            <input class="form-control" type="text" name="f_multitasking" placeholder="(Low - Normal - High)">
+        </div>
+
+        <div class="form-group">
+            <label>Noise</label>
+            <input class="form-control" type="text" name="f_noise" placeholder="(Low - Normal - High)">
+        </div>
+
+        <div class="form-group">
+            <label>Performance</label>
+            <input class="form-control" type="text" name="f_performance" placeholder="(Low - Normal - High)">
+        </div>
+
+        <div class="form-group">
+            <label>Neural</label>
+            <input class="form-control" type="number" name="f_neural" placeholder="(0-5)">
+        </div>
+
+        <div class="form-group">
+            <label>Synergy</label>
+            <input class="form-control" type="number" name="f_synergy" placeholder="(0-5)">
+        </div>
+
+        <div class="form-group">
+            <label>Performance Loss</label>
+            <input class="form-control" type="number" name="f_performanceloss" placeholder="(0-5)">
+        </div>
+
+        <div class="form-group">
+            <label>M1 Consideration</label>
+            <input class="form-control" type="number" name="m1_consideration" placeholder="(0-5)">
+        </div>
+
+        <div class="form-group">
+            <label>Gender</label>
+            <input class="form-control" type="text" name="gender" placeholder="(Male - Female)">
+        </div>
+
+        <div class="form-group">
+            <label>Age Group</label>
+            <input class="form-control" type="number" name="age_group" placeholder="(0-5)">
+        </div>
+
+        <div class="form-group">
+            <label>Income Group</label>
+            <input class="form-control" type="number" name="income_group" placeholder="(0-5)">
+        </div>
+
+        <div class="form-group">
+            <label>Status</label>
+            <input class="form-control" type="text" name="status" placeholder="Student">
+        </div>
+
+        <div class="form-group">
+            <label>Domain</label>
+            <input class="form-control" type="text" name="domain" placeholder="Science">
+        </div>
+        <br/>
+        <div class="d-grid col-6 mx-auto">
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+    </form>
+</div>
+{% endblock body %}
